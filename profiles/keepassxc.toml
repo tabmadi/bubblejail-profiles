@@ -1,0 +1,19 @@
+# KeePassXC
+dot_desktop_path = [
+    "/usr/share/applications/org.keepassxc.KeePassXC.desktop",
+]
+description='''
+KeePassXC, a cross-platform password manager.
+'''
+
+import_tips='''
+Move .config/keepassxc folder and your KeePass database file from your home
+directory in to instance home directory.
+'''
+
+[services.common]
+executable_name = "/usr/bin/keepassxc"
+[services.x11]
+[services.network]
+[services.notify]
+[services.direct_rendering]

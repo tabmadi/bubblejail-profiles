@@ -1,0 +1,24 @@
+# Telegram Desktop on Wayland
+dot_desktop_path = [
+    "/usr/share/applications/org.telegram.desktop.desktop",
+]
+description='''
+Telegram Desktop using wayland display protocol.
+'''
+
+import_tips='''
+Move .local/share/TelegramDesktop folder from your home directory in to
+instance home directory to keep your existing session.
+'''
+
+[services.common]
+executable_name = "/usr/bin/telegram-desktop"
+executable_args = ["-platform", "wayland",]
+[services.wayland]
+[services.network]
+[services.pulse_audio]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Downloads",]
+[services.v4l]
