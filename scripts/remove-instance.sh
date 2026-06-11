@@ -58,6 +58,10 @@ echo "removed  ${instance_dir}"
 if [[ -n "${desktop_entry}" ]]; then
     rm -f "${desktop_entry}"
     echo "removed  ${desktop_entry}"
+
+    if command -v update-desktop-database &>/dev/null; then
+        update-desktop-database "${APPLICATIONS_DIR}"
+    fi
 fi
 
 if [[ -d "${RUNTIME_DIR}/${name}" ]]; then
