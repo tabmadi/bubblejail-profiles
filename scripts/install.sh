@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Install bubblejail profiles from this repository into the user's
-# bubblejail profiles directory (~/.local/share/bubblejail/profiles).
+# bubblejail profiles directory (~/.config/bubblejail/profiles).
 #
 # Usage:
 #   ./scripts/install.sh                 # install all profiles
@@ -13,7 +13,7 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PROFILES_DIR="${REPO_ROOT}/profiles"
-DEST_DIR="${XDG_DATA_HOME:-${HOME}/.local/share}/bubblejail/profiles"
+DEST_DIR="${XDG_CONFIG_HOME:-${HOME}/.config}/bubblejail/profiles"
 
 mode="link"
 names=()
