@@ -19,7 +19,8 @@ their access to your system.
 │   ├── signal.toml
 │   └── ...
 └── scripts/
-    └── install.sh
+    ├── install.sh
+    └── remove-instance.sh
 ```
 
 Each profile is a single `<application>.toml` file placed directly in `profiles/`. See the
@@ -82,7 +83,10 @@ bubblejail create --profile <name> <instance-name>
    as a reference for available services and options.
 3. Test the profile locally with `./scripts/install.sh --copy <application>`
    followed by `bubblejail create --profile <application> test-instance`.
-4. Open a pull request following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+4. Once you're done testing, remove the instance with
+   `./scripts/remove-instance.sh test-instance`. This deletes the instance's
+   data directory, its desktop entry, and its runtime lock/socket directory.
+5. Open a pull request following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Contributing
 
