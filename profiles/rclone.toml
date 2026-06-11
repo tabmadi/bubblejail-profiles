@@ -1,0 +1,14 @@
+# rclone
+description='''
+rclone, a command line program to manage files on cloud storage. CLI only,
+no desktop entry.
+'''
+
+import_tips='''
+Move .config/rclone folder from your home directory in to instance
+home directory to keep your existing remotes.
+'''
+
+[services.common]
+executable_name = "/usr/bin/rclone"
+[services.network]
