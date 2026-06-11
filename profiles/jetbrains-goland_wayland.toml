@@ -1,0 +1,25 @@
+# GoLand on Wayland
+dot_desktop_path = "/usr/share/applications/jetbrains-goland.desktop"
+description='''
+GoLand using wayland display protocol.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .local/share/JetBrains, .cache/JetBrains and .config/JetBrains folders
+from your home directory in to instance home directory to keep your
+settings, plugins and license.
+
+Make sure ~/.local/share/JetBrains/Toolbox/scripts is in PATH inside the
+instance so the "goland" launcher script can be found.
+'''
+
+[services.common]
+executable_name = "goland"
+[services.wayland]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects", ".local/share/JetBrains", ".cache/JetBrains", ".config/JetBrains",]

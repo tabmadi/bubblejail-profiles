@@ -1,0 +1,25 @@
+# PhpStorm
+dot_desktop_path = "/usr/share/applications/jetbrains-phpstorm.desktop"
+description='''
+PhpStorm, a JetBrains IDE.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .local/share/JetBrains, .cache/JetBrains and .config/JetBrains folders
+from your home directory in to instance home directory to keep your
+settings, plugins and license.
+
+Make sure ~/.local/share/JetBrains/Toolbox/scripts is in PATH inside the
+instance so the "phpstorm" launcher script can be found.
+'''
+
+[services.common]
+executable_name = "phpstorm"
+[services.x11]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects", ".local/share/JetBrains", ".cache/JetBrains", ".config/JetBrains",]

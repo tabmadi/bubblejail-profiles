@@ -1,0 +1,22 @@
+# Visual Studio Code on Wayland
+dot_desktop_path = "/usr/share/applications/code.desktop"
+description='''
+Visual Studio Code using wayland display protocol.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .config/Code and .vscode folders from your home directory in to
+instance home directory to keep extensions and settings.
+'''
+
+[services.common]
+executable_name = "/usr/bin/code"
+executable_args = ["--ozone-platform=wayland",]
+[services.wayland]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects",]

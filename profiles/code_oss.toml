@@ -1,0 +1,21 @@
+# Code - OSS
+dot_desktop_path = "/usr/share/applications/code-oss.desktop"
+description='''
+Code - OSS, the open source build of Visual Studio Code.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .config/Code - OSS and .vscode-oss folders from your home directory in
+to instance home directory to keep extensions and settings.
+'''
+
+[services.common]
+executable_name = "/usr/bin/code-oss"
+[services.x11]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects",]

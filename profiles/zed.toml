@@ -1,0 +1,21 @@
+# Zed
+dot_desktop_path = "/usr/share/applications/dev.zed.Zed.desktop"
+description='''
+Zed, a high-performance, multiplayer code editor.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .config/zed and .local/share/zed folders from your home directory in
+to instance home directory to keep extensions and settings.
+'''
+
+[services.common]
+executable_name = "/usr/bin/zed"
+[services.x11]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects",]

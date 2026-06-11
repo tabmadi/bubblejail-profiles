@@ -1,0 +1,21 @@
+# Zed on Wayland
+dot_desktop_path = "/usr/share/applications/dev.zed.Zed.desktop"
+description='''
+Zed using wayland display protocol.
+
+Given access to ~/Projects by default.
+'''
+
+import_tips='''
+Move .config/zed and .local/share/zed folders from your home directory in
+to instance home directory to keep extensions and settings.
+'''
+
+[services.common]
+executable_name = "/usr/bin/zed"
+[services.wayland]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects",]

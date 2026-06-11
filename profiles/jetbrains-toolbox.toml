@@ -1,0 +1,22 @@
+# JetBrains Toolbox
+dot_desktop_path = "/usr/share/applications/jetbrains-toolbox.desktop"
+description='''
+JetBrains Toolbox App, used to install and update JetBrains IDEs.
+'''
+
+import_tips='''
+Move .local/share/JetBrains folder from your home directory in to instance
+home directory to keep your installed IDEs, settings and license.
+
+Add ~/.local/share/JetBrains/Toolbox/scripts to PATH inside the instance to
+be able to launch IDEs by their shell scripts (idea, pycharm, etc.).
+'''
+
+[services.common]
+executable_name = "/usr/bin/jetbrains-toolbox"
+[services.x11]
+[services.network]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Projects", ".local/share/JetBrains", ".cache/JetBrains", ".config/JetBrains",]
