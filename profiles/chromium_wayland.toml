@@ -1,0 +1,27 @@
+# Chromium on Wayland
+dot_desktop_path = [
+    "/usr/share/applications/org.chromium.Chromium.desktop",
+    "/usr/share/applications/chromium-browser.desktop",
+    "/usr/share/applications/chromium.desktop",
+]
+description='''
+Chromium using wayland display protocol.
+'''
+
+import_tips='''
+Move .config/chromium folder from your home directory in to instance
+home directory.
+'''
+
+[services.common]
+executable_name = "/usr/bin/chromium"
+executable_args = ["--ozone-platform=wayland",]
+[services.wayland]
+[services.network]
+[services.pulse_audio]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Downloads",]
+[services.mpris]
+player_name = "chromium.*"

@@ -1,0 +1,26 @@
+# Google Chrome on Wayland
+dot_desktop_path = [
+    "/usr/share/applications/google-chrome.desktop",
+    "/usr/share/applications/com.google.Chrome.desktop",
+]
+description='''
+Google Chrome using wayland display protocol.
+'''
+
+import_tips='''
+Move .config/google-chrome folder from your home directory in to instance
+home directory.
+'''
+
+[services.common]
+executable_name = "/usr/bin/google-chrome-stable"
+executable_args = ["--ozone-platform=wayland",]
+[services.wayland]
+[services.network]
+[services.pulse_audio]
+[services.notify]
+[services.direct_rendering]
+[services.home_share]
+home_paths = ["Downloads",]
+[services.mpris]
+player_name = "chrome.*"
