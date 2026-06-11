@@ -19,7 +19,7 @@ their access to your system.
 │   ├── signal.toml
 │   └── ...
 └── scripts/
-    └── install-profiles.sh
+    └── install.sh
 ```
 
 Each profile is a single `<application>.toml` file placed directly in `profiles/`. See the
@@ -42,25 +42,25 @@ git clone https://github.com/<your-org>/bubblejail-profiles.git
 cd bubblejail-profiles
 
 # Install all profiles (symlinked into ~/.local/share/bubblejail/profiles)
-./scripts/install-profiles.sh
+./scripts/install.sh
 
 # Install only specific profiles
-./scripts/install-profiles.sh firefox signal
+./scripts/install.sh firefox signal
 
 # Copy instead of symlink
-./scripts/install-profiles.sh --copy
+./scripts/install.sh --copy
 
 # List all available profiles
-./scripts/install-profiles.sh --list
+./scripts/install.sh --list
 ```
 
 If you have [Mise](https://mise.jdx.dev/) installed, you can run the same script via the
-`install-profiles` task instead:
+`install` task instead:
 
 ```bash
-mise run install-profiles
-mise run install-profiles -- firefox signal
-mise run install-profiles -- --copy
+mise run install
+mise run install -- firefox signal
+mise run install -- --copy
 ```
 
 By default profiles are symlinked into `$XDG_DATA_HOME/bubblejail/profiles`
@@ -80,7 +80,7 @@ bubblejail create --profile <name> <instance-name>
 2. Use the existing profiles and the
    [Bubblejail documentation](https://github.com/igo95862/bubblejail/blob/master/doc/services.md)
    as a reference for available services and options.
-3. Test the profile locally with `./scripts/install-profiles.sh --copy <application>`
+3. Test the profile locally with `./scripts/install.sh --copy <application>`
    followed by `bubblejail create --profile <application> test-instance`.
 4. Open a pull request following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
